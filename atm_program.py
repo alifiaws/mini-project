@@ -25,7 +25,7 @@ while True:
         print('Saldo Anda Rp ' + str(atm.checkBalance()) + '\n')
 
     elif option == 2:
-        nominal = int(input('Masukkan Nominal Saldo: Rp '))
+        nominal = float(input('Masukkan Nominal Saldo: Rp '))
 
         if nominal < atm.checkBalance():
             atm.withdrawBalance(nominal)
@@ -34,7 +34,7 @@ while True:
             print('Maaf Saldo Anda Tidak Mencukupi Untuk Transaksi Ini.' + '\n')
 
     elif option == 3:
-        nominal = int(input('Masukkan Nominal Saldo: Rp '))
+        nominal = float(input('Masukkan Nominal Saldo: Rp '))
 
         atm.depositBalance(nominal)
         print('Transaksi Berhasil. Saldo Anda Sekarang: Rp' + str(atm.checkBalance()) + '. Terima Kasih. \n')
